@@ -1,3 +1,41 @@
-{{#each @projects as |project|}}
-  <img src={{project}} alt="Logo du projet">
-{{/each}}
+<div class="projects-page">
+  {{#if projects}}
+    {{#each @projects as |project|}}
+      <div class="project">
+        <div class="div-img">
+          <img class="img-project" src={{project.illustration.url}} alt="Logo du projet">
+        </div>
+        <div class="flag">
+          <img class="first-plan" src="/assets/svg/icon-flag-fr.svg" alt="flag">
+        </div>
+        <div class="project-detail">
+          <div class="detail">
+            <div class="strong">
+              {{project.name}}
+            </div>
+            <div class="color-grey">
+              {{project.onlineDate}}
+            </div>
+          </div>
+          <div class="detail">
+            <div class="align-center">
+              {{project.rate}}% · {{project.loanDuration}} months
+            </div>
+            <div class="align-center justify-center">
+              €{{project.amount}}
+            </div>
+            <div class="align-center grade">
+              {{#if (eq project.grade "A+")}} <a class="circle ap"></a> {{/if}} 
+              {{#if (eq project.grade "A")}} <a class="circle a"></a> {{/if}} 
+              {{#if (eq project.grade "B+")}} <a class="circle bp"></a> {{/if}} 
+              {{#if (eq project.grade "B")}} <a class="circle b"></a> {{/if}} 
+              {{#if (eq project.grade "C+")}} <a class="circle cp"></a> {{/if}} 
+              {{#if (eq project.grade "C")}} <a class="circle c"></a> {{/if}} 
+                {{project.grade}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{/if}}
+</div>

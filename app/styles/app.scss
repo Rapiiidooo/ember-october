@@ -1,0 +1,119 @@
+.projects-page {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    margin: auto;
+    max-width: 1080px;
+    background-color: #fffafaaa;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background-color: 	#dbdbdbab;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 100%;
+
+    .div-img {
+        width: 100%;
+        display: flex;
+    }
+}
+
+.img-project {
+    margin: 1em;
+    border-radius: 15px;
+    height: 250px;
+    width: 100%;
+}
+
+.project-detail {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    background-color: #fffafaaa;
+
+    :nth-child(1n) {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .detail {
+        display: flex;
+        flex-direction: row;
+    
+        div {
+            flex: 1;
+        }
+
+        div:last-child {
+            text-align: end;
+        }
+
+        .align-center {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.flag {
+    display: flex;
+    justify-content: center;
+    margin-top: -0.5em;
+    margin-bottom: -0.5em;
+}
+
+.first-plan {
+    z-index: 100;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-grey {
+    color: grey;
+    // opacity: 0.6; depends what you want really ?
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.circle {
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 50px;
+    margin-right: 0.5em;
+
+    &.ap {
+        background-color: green;
+    }
+    &.a {
+        background-color: greenyellow;
+    }
+    &.bp {
+        background-color: yellow;
+    }
+    &.b {
+        background-color: orange;
+    }
+    &.cp {
+        background-color: orangered;
+    }
+    &.c {
+        background-color: red;
+    }
+}
+
+.grade {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
